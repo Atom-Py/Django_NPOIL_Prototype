@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Текущие заказы{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <h1 class="display-4">Текущие заказы</h1>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <table class="table table-bordered table-hover table-responsive">
+                    <thead class="thead-dark">
+                        <tr class="text-center">
+                            <th scope="col">#</th>
+                            <th scope="col">Топливо</th>
+                            <th scope="col">Дата заказа</th>
+                            <th scope="col">Статус</th>
+                            <th scope="col">Объем</th>
+                            <th scope="col">Адрес</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for order in orders %}
+                            <tr>
+                                <td class="text-center">
+                                    <a href="/categories/{{ order.fuel.type.slug }}/{{ order.fuel.slug }}">
+                                        <img src="{{ order.fuel.image.url }}" width="88">
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    {{ order.fuel }}
+                                </td>
+                                <td class="text-center">
+                                    {{ order.date }}
+                                </td>
+                                <td class="text-center">
+                                    {{ order.status }}
+                                </td>
+                                <td class="text-center">
+                                    {{ order.volume }}
+                                </td>
+                                <td class="text-center">
+                                    {{ order.address }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+{% endblock %}

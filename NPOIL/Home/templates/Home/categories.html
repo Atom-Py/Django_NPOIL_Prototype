@@ -1,0 +1,21 @@
+{% extends "base1.html" %}
+{% block title %}Продукты{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <h1 class="display-4">Виды топлива</h1>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 text-center">
+                {% for category in categories %}
+                    <div class="img-wrap mx-5 my-3">
+                        <a href="{{ category.slug }}">
+                            <img src="{{ category.image.url }}" class="img-responsive rounded shadow-lg">
+                            <h5 class="text-center" style="color:#ffffff">{{ category.name }}</h5>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+{% endblock %}

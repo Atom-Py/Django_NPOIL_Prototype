@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Личный кабинет{% endblock %}
+{% block navigation %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav_item">
+                <a href="/categories/" class="nav-link mr-5">Каталог</a>
+            </li>
+            <li class="nav_item">
+                <a href="logout/" class="nav-link nav-link btn btn-info"><font color="white"><strong>Выйти</strong></font></a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <h1 class="display-4">Личный кабинет</h1>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-center">
+                <h3 class="my-5" style="fonts">Добро пожаловать, {{ name }}!</h3>
+                <div class="MyMenu mx-3 my-3">
+                    <a href="personal/" class="btn btn-light" id="MyButton1">
+                        <br>
+                        <img src="{% static "img/user.png" %}" width="100">
+                        <p class="my-4">Личные данные</p>
+                    </a>
+                </div>
+                <div class="MyMenu mx-3 my-3">
+                    <a href="msg/" class="btn btn-light" id="MyButton1">
+                        <br>
+                        <img src="{% static "img/chat.png" %}" width="100">
+                        <p class="my-4">Чат поддержки</p>
+                    </a>
+                </div>
+                <div class="MyMenu mx-3 my-3">
+                    <a href="current_orders/" class="btn btn-light" id="MyButton1">
+                        <br>
+                        <img src="{% static "img/bill.png" %}" width="100">
+                        <p class="my-4">Текущие заказы</p>
+                    </a>
+                </div>
+                <div class="MyMenu mx-3 my-3">
+                    <a href="all_orders/" class="btn btn-light" id="MyButton1">
+                        <br>
+                        <img src="{% static "img/policy.png" %}" width="100">
+                        <p class="my-4">История заказов</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+{% endblock %}

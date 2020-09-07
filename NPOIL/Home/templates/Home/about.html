@@ -1,0 +1,62 @@
+{% extends "base1.html" %}
+{% load static %}
+{% block title %}О нас{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+        <h1 class="display-4">О нас</h1>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 text-justify">
+                <h5 class="mytext1 my-4">
+                    <p>
+                        ООО «НПОйл» занимается оптовой торговлей светлых нефтепродуктов.
+                        Осуществляет продажи таких продуктов как Бензин, Дизельное топливо, Дистилляты газового конденсата, Дизельная технологическая фракция, Керосин, Реактивное топливо.
+                        Свою деятельность ведет на территории Российской Федерации.
+                    </p>
+                    <p>
+                        Наша организация имеет договора поставки с официальными дистрибьютерами таких заводов как: «Танеко» г. Нижнекамск, «Марийский НПЗ» г. Табашино,
+                        Антипинский НПЗ г. Тюмень, «Таиф» г. Нижнекамск, «ЕлховНефть» г. Альметьевск, а также с различными нефтебазами на территории Российской Федерации.
+                    </p>
+                    <p>
+                        Наши менеджеры занимаются поиском потенциальных клиентов на территории Российской Федерации путем «холодных звонков», после чего заключают договора поставки с найденными клиентами.
+                        Наша организация закупает топливо по индивидуальным условиям ценообразования. Мы же в свою очередь, поставляем топливо, как конечным потребителям, так и компаниям, которые занимаются посреднической деятельностью, но не имеющих определенную «входную цену» от заводов изготовителей.
+                    </p>
+                </h5>
+                <div class="text-center">
+                    <img class="img-fluid" src="{% static "img/picture1.png" %}">
+                </div>
+                <h4 class="my-3">Контакты</h4>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="grid-container">
+                    <div class="item">
+                        <img src="{% static "img/address.png" %}">
+                    </div>
+                    <div class="item">
+                        <p>420111, ПФО-РТ, г. Казань, ул. Зои Космодемьянской, д.3, помещение 1000, комната 5-8</p>
+                    </div>
+                    <div class="item">
+                        <img src="{% static "img/phone.png" %}">
+                    </div>
+                    <div class="item">
+                        <p>8 (843) 230 48 74</p>
+                    </div>
+                    <div class="item">
+                        <img src="{% static "img/mail.png" %}">
+                    </div>
+                    <div class="item">
+                        <p>npoil-kazan@mail.ru</p>
+                    </div>
+                </div>
+                <div class="my-5">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad2d227032ea6fb12765e228d4f735296761116dbb094a90a279dd3e0ad01b3ae&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+{% endblock %}

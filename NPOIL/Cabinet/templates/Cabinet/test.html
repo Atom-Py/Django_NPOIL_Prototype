@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for order in orders %}
+        <p>
+            {{ order.client }}
+            {{ order.fuel }}
+            {{ order.date }}
+            {{ order.status_bool }}
+        </p>
+    {% endfor %}
+{% endblock %}
